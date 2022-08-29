@@ -1,10 +1,14 @@
 import React from "react";
 
 function Item(props) {
-  const { value, onCheck } = props;
+  const { value, onCheck, onDelItem } = props;
 
   const handleChange = () => {
     onCheck(value);
+  }
+
+  const handleDelItem = () => {
+    onDelItem(props.index);
   }
 
   return(
@@ -13,11 +17,12 @@ function Item(props) {
       <td>
         <input
           type="checkbox"
-          checked={value.done}
+          checked={value.selected}
           onChange={handleChange}
         />
       </td>
       <td>{props.value.message}</td>
+      <td><button onClick={handleDelItem} className="btn btn-warning btn-sm">削除</button></td>
     </tr>
   )
 }
