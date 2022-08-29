@@ -10,6 +10,7 @@ function AddTodoForm (props) {
   const doAction = (e) => {
     props.onAddTodo(text);
     setTodoText('');
+    e.preventDefault();
   }
 
   return (

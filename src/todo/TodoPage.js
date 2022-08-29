@@ -17,7 +17,7 @@ function TodoPage() {
       selected: false,
     }
     todo.unshift(data);
-    setTodo(todo);
+    setTodo(todo.concat());
   };
 
   const handleCheck = value => {
