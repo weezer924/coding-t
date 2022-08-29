@@ -31,7 +31,8 @@ function TodoPage() {
   };
 
   const handleDeleteItem = value => {
-    setTodo(todo.filter(todo => todo.key !== value.key));
+    todo.splice(value - 1, 1)
+    setTodo(todo.concat());
   };
 
   const handleDeleteItemSeleted = () => {

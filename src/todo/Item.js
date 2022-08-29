@@ -8,7 +8,7 @@ function Item(props) {
   }
 
   const handleDelItem = () => {
-    onDelItem(value);
+    onDelItem(props.index);
   }
 
   return(
