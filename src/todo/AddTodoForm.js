@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 
 function AddTodoForm (props) {
-  const [text, setTodoText] = useState('')
+  const [text, setTodoText] = useState('');
 
   const doChange = (e) => {
-    setTodoText(e.target.value)
+    setTodoText(e.target.value);
   }
 
   const doAction = (e) => {
     props.onAddTodo(text);
-    setTodoText('')
+    setTodoText('');
   }
 
   return (

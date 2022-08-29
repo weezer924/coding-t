@@ -16,8 +16,8 @@ function TodoPage() {
       message: message,
       selected: false,
     }
-    todo.unshift(data)
-    setTodo(todo)
+    todo.unshift(data);
+    setTodo(todo);
   };
 
   const handleCheck = value => {
@@ -34,11 +34,11 @@ function TodoPage() {
     setTodo(todo.filter(todo => todo.key !== value.key));
   };
 
-  const handleDeleteItemSeleted = value => {
+  const handleDeleteItemSeleted = () => {
     setTodo(todo.filter(todo => !todo.selected));
   };
 
-  const handleDeleteItemAll = value => {
+  const handleDeleteItemAll = () => {
     setTodo([]);
   };
 
